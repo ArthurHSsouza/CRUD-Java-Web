@@ -11,13 +11,13 @@ public class MovimentacaoValidation {
 		String saida = m.getSaida();
 		
 		if(tipo.trim() == "" || tipo == null) {
-			throw new Exception("Cliente invalido");
+			throw new Exception("Tipo invalido");
 		}
 		if(entrada.trim() == "" || entrada == null) {
-			throw new Exception("Codigo do Container invalido");
+			throw new Exception("Entrada invalida");
 		}
 		if(saida.trim() == "" || saida == null) {
-			throw new Exception("Tipo invalido");
+			throw new Exception("Saída Invalida");
 		}
 		
 	}

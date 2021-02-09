@@ -21,6 +21,9 @@
 		<div class="card-header">
 		   <h3>Lista de Containers</h3>
 		   <div class="card-body">
+		   <%if(request.getAttribute("error") != null){ %>
+			<nav class="link link-danger"><h3><%=request.getAttribute("error")%></h3></nav>
+			<%} %>
 		   		
 		   		<%	
 		   			ArrayList<Container> resultList = (ArrayList<Container>) request.getAttribute("list");

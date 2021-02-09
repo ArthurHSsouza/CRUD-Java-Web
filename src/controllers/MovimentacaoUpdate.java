@@ -27,17 +27,14 @@ public class MovimentacaoUpdate extends HttpServlet{
 			m.setId(Integer.parseInt(req.getParameter("id")));
 			dao.update(m);
 			
-		
 			try {
 				MovimentacaoValidation.validation(m);
 				dao.update(m);
-				res.sendRedirect("readMovimentacao?id="+req.getParameter("id")+
-				"&container_id="+req.getParameter("container_id"));
+				res.sendRedirect("readMovimentacao?id="+req.getParameter("container_id"));
 
 			}catch(Exception error) {
 				
-				res.sendRedirect("readMovimentacao?id="+req.getParameter("id")+
-				"&container_id="+req.getParameter("container_id")+
+				res.sendRedirect("readMovimentacao?id="+req.getParameter("container_id")+
 				"&error="+error.getMessage());
 			}
 		}
