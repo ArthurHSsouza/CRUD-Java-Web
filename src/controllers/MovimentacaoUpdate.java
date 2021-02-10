@@ -6,6 +6,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import dao.MovimentacaoDAO;
 import models.Movimentacao;
@@ -22,10 +26,29 @@ public class MovimentacaoUpdate extends HttpServlet{
 			
 			Movimentacao m = new Movimentacao();
 			m.setTipo(req.getParameter("tipo"));
-			m.setEntrada(req.getParameter("entrada")+" "+req.getParameter("entrada2"));
-			m.setSaida(req.getParameter("saida")+" "+req.getParameter("saida2"));
+			String entradaString = req.getParameter("entrada");
+			String saidaString = req.getParameter("saida");
 			m.setId(Integer.parseInt(req.getParameter("id")));
 			
+			entradaString = entradaString.replace("T", " ");
+			saidaString = saidaString.replace("T", " ");
+			
+			DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+			
+			Date entrada = null;
+			Date saida = null;
+			
+			try {
+				
+				 entrada = df.parse(entradaString);
+				 saida = df.parse(saidaString);
+				 m.setEntrada(entrada);
+				 m.setSaida(saida);
+				 
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+		
 			try {
 				MovimentacaoValidation.validation(m);
 				dao.update(m);

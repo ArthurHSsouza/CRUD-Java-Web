@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sistema Portuário</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
@@ -30,11 +30,9 @@
 			<option value="Scanner">Scanner</option>
 		</select>
 		<label for="entrada" class="form-label mt-3">Entrada:</label>
-		<input class="form-control" type="date" name="entrada">
-		<input class="form-control" type="time" name="entrada2">
+		<input class="form-control" type="datetime-local" name="entrada">
 		<label for="saida" class="form-label mt-3">Saída: </label>
-		<input class="form-control" type="date" name="saida">
-		<input class="form-control" type="time" name="saida2">
+		<input class="form-control" type="datetime-local" name="saida">
 		
 		<button class="btn btn-success mt-4">Salvar</button>
 		</form>

@@ -1,5 +1,7 @@
 package validation;
 
+import java.util.Date;
+
 import models.Movimentacao;
 
 public class MovimentacaoValidation {
@@ -7,27 +9,22 @@ public class MovimentacaoValidation {
 	public static void validation(Movimentacao m)  throws Exception{
 		
 		String tipo = m.getTipo();
-		String entrada = m.getEntrada();
-		String saida = m.getSaida();
-		String entrada2 = m.getEntrada2();
-		String saida2 = m.getSaida2();
-		
+		Date entrada = m.getEntrada();
+		Date saida = m.getSaida();
 		
 		if(tipo == "" || tipo == null) {
 			throw new Exception("Tipo invalido");
 		}
-		if(entrada == "" || entrada == null) {
+		if(entrada == null) {
 			throw new Exception("Entrada invalida");
 		}
-		if(saida == "" || saida == null) {
-			throw new Exception("Saída Invalida");
+		if(saida == null) {
+			throw new Exception("Saida Invalida");
 		}
-		if(entrada2 == "" || entrada2 == null) {
-			throw new Exception("Entrada invalida");
+		if(entrada.after(saida)) {
+			throw new Exception("A entrada nao pode ocorrer antes da saida");
 		}
-		if(saida2 == "" || saida2 == null) {
-			throw new Exception("Saída Invalida");
-		}
+		
 		
 	}
 	

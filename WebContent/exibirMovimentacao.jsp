@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sistema Portuário</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
@@ -45,8 +45,8 @@
 		   			</div>
 		   			<div class="card-body">
 		   			  <h6 class="mt-4">
-		   			  	  Entrada:      <%=m.getEntrada()%></br>
-		   			  	  Saida  :    <%=m.getSaida()%></br>
+		   			  	  Entrada:      <%=m.getEntrada().toLocaleString()%></br>
+		   			  	  Saida  :    <%=m.getSaida().toLocaleString()%></br>
 		   			  </h6>
 		   			 	<a class="btn btn-primary" href="getMovimentacaoFormUpdate?id=<%=m.getId()%>&container_id=<%=m.getContainer_id()%>">Editar Movimentacão</a>
 		   			 	<a class="btn btn-danger" href="deleteMovimentacao?id=<%=m.getId()%>&container_id=<%=m.getContainer_id()%>">Deletar Movimentacão</a>

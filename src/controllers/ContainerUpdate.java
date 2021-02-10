@@ -17,7 +17,6 @@ public class ContainerUpdate extends HttpServlet{
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
-		String id = req.getParameter("id");
 		String cliente = req.getParameter("cliente");
 		String numeroContainer = req.getParameter("numeroContainer");
 		String tipo = req.getParameter("tipo");
