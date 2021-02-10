@@ -22,8 +22,10 @@ public class MovimentacaoInsert extends HttpServlet{
 			Movimentacao m = new Movimentacao();
 			
 			m.setTipo(req.getParameter("tipo"));	
-			m.setEntrada(req.getParameter("entrada")+"   "+req.getParameter("entrada2"));
-			m.setSaida(req.getParameter("saida")+"   "+req.getParameter("saida2"));
+			m.setEntrada(req.getParameter("entrada"));
+			m.setEntrada2(req.getParameter("entrada2"));
+			m.setSaida(req.getParameter("saida"));
+			m.setSaida2(req.getParameter("saida2"));
 			m.setContainer_id(Integer.parseInt(req.getParameter("container_id")));
 			try {
 				MovimentacaoValidation.validation(m);

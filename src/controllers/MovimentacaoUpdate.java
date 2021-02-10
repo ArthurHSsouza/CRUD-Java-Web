@@ -25,7 +25,6 @@ public class MovimentacaoUpdate extends HttpServlet{
 			m.setEntrada(req.getParameter("entrada")+" "+req.getParameter("entrada2"));
 			m.setSaida(req.getParameter("saida")+" "+req.getParameter("saida2"));
 			m.setId(Integer.parseInt(req.getParameter("id")));
-			dao.update(m);
 			
 			try {
 				MovimentacaoValidation.validation(m);

@@ -28,8 +28,8 @@ public class MovimentacaoDAO {
 			
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, m.getTipo());
-			stmt.setString(2, m.getEntrada());
-			stmt.setString(3, m.getSaida());
+			stmt.setString(2, m.getEntrada()+" - "+m.getEntrada2());
+			stmt.setString(3, m.getSaida()+" - "+m.getSaida2());
 			stmt.setInt(4, m.getContainer_id());
 			stmt.execute();
 			stmt.close();

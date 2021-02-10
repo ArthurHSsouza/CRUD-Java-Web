@@ -1,5 +1,5 @@
 package models;
-import java.sql.Date;
+
 
 public class Movimentacao {
 
@@ -7,6 +7,8 @@ public class Movimentacao {
 		private String tipo;
 		private String entrada;
 		private String saida;
+		private String entrada2;
+		private String saida2;
 		private int container_id;
 		
 		public String getEntrada() {
@@ -43,6 +45,18 @@ public class Movimentacao {
 		}
 		public void setContainer_id(int container_id) {
 			this.container_id = container_id;
+		}
+		public String getEntrada2() {
+			return entrada2;
+		}
+		public void setEntrada2(String entrada2) {
+			this.entrada2 = entrada2;
+		}
+		public String getSaida2() {
+			return saida2;
+		}
+		public void setSaida2(String saida2) {
+			this.saida2 = saida2;
 		}	
 		
 }
