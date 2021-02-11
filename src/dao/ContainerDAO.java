@@ -2,7 +2,6 @@ package dao;
 
 import models.Container;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -14,7 +13,7 @@ public class ContainerDAO {
 	private PreparedStatement stmt;
 	private Statement st;
 	private ResultSet rs;
-	private ArrayList<Container> list = new ArrayList();
+	private ArrayList<Container> list = new ArrayList<>();
 
 	public ContainerDAO(){
 		conn = new ConnectionFactory().getConexao();

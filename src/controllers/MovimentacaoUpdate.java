@@ -16,6 +16,7 @@ import models.Movimentacao;
 import validation.MovimentacaoValidation;
 
 
+@SuppressWarnings("serial")
 @WebServlet("/movimentacaoUpdate")
 
 public class MovimentacaoUpdate extends HttpServlet{

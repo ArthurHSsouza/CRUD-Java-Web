@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
+@SuppressWarnings("serial")
 @WebServlet("/getMovimentacaoFormUpdate")
 
 public class getMovimentacaoUpdate extends HttpServlet{

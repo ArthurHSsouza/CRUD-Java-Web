@@ -1,7 +1,6 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.text.DateFormat;
@@ -9,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.sql.ResultSet;
 import models.Movimentacao;
-import java.util.Date;
 import java.util.Locale;
 
 public class MovimentacaoDAO {

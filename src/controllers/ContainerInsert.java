@@ -1,6 +1,5 @@
 package controllers;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,6 +9,7 @@ import java.io.IOException;
 import dao.ContainerDAO;
 import validation.ContainerValidation;
 
+@SuppressWarnings("serial")
 @WebServlet("/addContainer")
 
 public class ContainerInsert extends HttpServlet{

@@ -10,6 +10,7 @@ import java.io.IOException;
 import dao.MovimentacaoDAO;
 
 
+@SuppressWarnings("serial")
 @WebServlet("/deleteMovimentacao")
 
 public class MovimentacaoDelete extends HttpServlet{

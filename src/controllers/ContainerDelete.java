@@ -9,6 +9,7 @@ import java.io.IOException;
 
 import dao.ContainerDAO;
 
+@SuppressWarnings("serial")
 @WebServlet("/deleteContainer")
 
 public class ContainerDelete extends HttpServlet{

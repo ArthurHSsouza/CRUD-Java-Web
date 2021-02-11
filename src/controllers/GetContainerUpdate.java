@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@SuppressWarnings("serial")
 @WebServlet("/getContainerUpdate")
 
 public class GetContainerUpdate extends HttpServlet{

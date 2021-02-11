@@ -12,6 +12,7 @@ import dao.MovimentacaoDAO;
 import models.Movimentacao;
 import java.util.ArrayList;
 
+@SuppressWarnings("serial")
 @WebServlet("/readMovimentacao")
 
 public class MovimentacaoRead extends HttpServlet{
