@@ -8,7 +8,7 @@ public class ConnectionFactory {
 		try {
 			
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		return DriverManager.getConnection("jdbc:mysql://localhost/sistema_porto?serverTimezone=UTC","root","18901347a");
+		return DriverManager.getConnection("jdbc:mysql://localhost/sistema_porto?serverTimezone=UTC","root","");
 			
 		}catch(Exception error) {
 			throw new RuntimeException("Erro 1: "+error);
