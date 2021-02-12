@@ -25,7 +25,6 @@ public class ContainerValidation {
 			}
 			
 			if(!numeroContainer.substring(0, 4).matches("[A-Z][A-Z][A-Z][A-Z]")) {
-				System.out.println(numeroContainer.substring(0, 4));
 				throw new Exception("Codigo do Container invalido");
 			}
 			try {
